@@ -35,7 +35,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 </mime-type>
 </mime-info>' > /usr/share/mime/packages/processing.xml
 
-#update-mime-database /usr/share/mime
+update-mime-database /usr/share/mime
 
 echo 'text/x-processing=processing.desktop' >> /usr/share/applications/defaults.list
 
