@@ -23,7 +23,7 @@ else
 
     #create a launcher file and input contents
     echo "[Desktop Entry]
-    1=$1
+    Version=$1
     Name=Processing
     Comment=Processing :)
     Exec=/opt/Processing/$1/processing %F
