@@ -8,4 +8,4 @@
 # run this file under sudo in the same directory as the 3.1.2 tarball download 
 # if this is the downloads folder do the following. 
 # cd ~/Downloads 
-# ./InstallProcessing.sh
+# ./InstallProcessing.sh 3.1.2 64
