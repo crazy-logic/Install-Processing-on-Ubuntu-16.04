@@ -1,12 +1,5 @@
 #!/bin/bash 
 
-# If not run as root, run as root (ask for passwd if not root but sudoer)
-if [ "$(whoami)" != "root" ]
-then
-    sudo su -s "$0"
-    exit
-fi
-
 # To install a newer or older version of Processing, change the version below.
 version=3.3.6
 
