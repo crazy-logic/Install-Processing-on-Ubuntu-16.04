@@ -1,31 +1,37 @@
-#!/bin/bash          
-          echo This script will install Processing-3.3.6-linux64 on Ubuntu 16.04.
+#!/bin/bash 
 
+# To install a newer or older version of Processing, change the version below.
+version=3.3.6
 
-#create folder 
+echo This script will install Processing-$version-linux64 on Ubuntu 16.04.
+
+# Download Processing
+wget http://download.processing.org/processing-$version-linux64.tgz
+
+# Create folder 
 mkdir /opt/Processing
 
-#unzip the tarball
-tar -xvzf processing-3.3.6-linux64.tgz -C /opt/Processing
+# Unzip the tarball
+tar -xvzf processing-$version-linux64.tgz -C /opt/Processing
 
-#rename the folder 
-mv /opt/Processing/processing-3.3.6 /opt/Processing/3.3.6
+# Rename the folder 
+mv /opt/Processing/processing-$version /opt/Processing/$version
 
-#create a desktop icon for Processing 
-ln -s /opt/Processing/3.3.6/processing /usr/local/bin/processing
+# Create a desktop icon for Processing 
+ln -s /opt/Processing/$version/processing /usr/local/bin/processing
 
-#create a launcher file and input contents 
+# Create a launcher file and input contents 
 echo '[Desktop Entry]
-Version=3.3.6
+Version=$version
 Name=Processing
 Comment=Processing :) 
 Exec=processing %F
-Icon=/opt/Processing/3.3.6/lib/icons/pde-256.png
+Icon=/opt/Processing/$version/lib/icons/pde-256.png
 Terminal=false
 Type=Application
 Categories=AudioVideo;Video;Graphics;' >  /usr/share/applications/processing.desktop
 
-#create a mime type for .pde files. (might be an issue ith arduino too?) 
+# Create a mime type for .pde files. (might be an issue with arduino too?) 
 echo '<?xml version="1.0" encoding="UTF-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
 <mime-type type="text/x-processing">
@@ -38,6 +44,5 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 update-mime-database /usr/share/mime
 
 echo 'text/x-processing=processing.desktop' >> /usr/share/applications/defaults.list
-
 echo 'install complete'
-
+echo 'Script by crazy-logic, edit by AtjonTV'
