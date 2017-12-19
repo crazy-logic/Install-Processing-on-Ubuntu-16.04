@@ -1,7 +1,7 @@
 # Install-Processing-on-Ubuntu-16.04
 a bash script to install Processing 3.3.6 on Ubuntu 16.04
 
-After downloading the script do the following:
+After [downloading](https://github.com/AtjonTV/Install-Processing-on-Ubuntu-16.04/releases/download/inst_p3_v3.3.6/InstallProcessing.sh) the script do the following:
 
 `cd ~/Downloads`   
 `sudo sh InstallProcessing.sh`
