@@ -9,3 +9,5 @@
 # if this is the downloads folder do the following. 
 # cd ~/Downloads 
 # ./InstallProcessing.sh
+
+I havent looked into this for a while 
