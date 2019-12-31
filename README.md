@@ -11,3 +11,4 @@
 # ./InstallProcessing.sh
 
 I havent looked into this for a while 
+This is on my todo's to update
